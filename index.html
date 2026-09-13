@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joseph’s Shito-Ryu — Adult Karate in Port Orchard / South Kitsap</title>
+  <meta name="description" content="Adult Shito-Ryu karate with Joseph Vasquez in Port Orchard and South Kitsap. Evening classes. Recommended $150 a month after the first month.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #161412;
+      --paper: #f4efe6;
+      --paper-2: #ebe4d8;
+      --rule: #c9bfb0;
+      --muted: #5c564c;
+      --crimson: #8b2a2a;
+      --crimson-dark: #6e1f1f;
+      --white: #fffdf8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.65;
+      font-size: 17px;
+    }
+    a { color: var(--crimson); }
+    .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+    .narrow { width: min(720px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(244,239,230,.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 0; gap: 16px;
+    }
+    .brand {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 600; font-size: 1.18rem; letter-spacing: .02em;
+      color: var(--ink); text-decoration: none;
+    }
+    .brand span {
+      display: block;
+      font-family: "Source Sans 3", sans-serif;
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    nav { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: flex-end; }
+    nav a {
+      color: var(--ink); text-decoration: none; font-size: .82rem;
+      letter-spacing: .08em; text-transform: uppercase; font-weight: 500;
+    }
+    nav a:hover { color: var(--crimson); }
+    .hero {
+      padding: 80px 0 72px;
+      border-bottom: 1px solid var(--rule);
+      background:
+        radial-gradient(ellipse at 12% 0%, rgba(139,42,42,.08), transparent 46%),
+        linear-gradient(180deg, #efe8dc 0%, var(--paper) 100%);
+    }
+    .kicker {
+      font-size: .75rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--crimson); font-weight: 600; margin-bottom: 14px;
+    }
+    h1 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2.4rem, 5.6vw, 4rem);
+      line-height: 1.06; font-weight: 600; max-width: 16ch;
+    }
+    .lede { margin-top: 22px; max-width: 46ch; font-size: 1.16rem; color: #2b2823; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 30px; }
+    .btn {
+      display: inline-block; background: var(--crimson); color: var(--white);
+      text-decoration: none; padding: 13px 22px; font-weight: 600;
+      letter-spacing: .04em; border: 1px solid var(--crimson-dark);
+    }
+    .btn:hover { background: var(--crimson-dark); }
+    .btn-ghost {
+      display: inline-block; color: var(--ink); text-decoration: none;
+      padding: 13px 8px; font-size: .95rem; border-bottom: 1px solid var(--rule);
+    }
+    .fine { margin-top: 18px; color: var(--muted); font-size: .92rem; }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+    .pill {
+      font-size: .78rem; letter-spacing: .06em; text-transform: uppercase;
+      border: 1px solid var(--rule); padding: 6px 10px; color: var(--muted);
+      background: var(--white);
+    }
+    section { padding: 76px 0; border-bottom: 1px solid var(--rule); }
+    h2 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.85rem, 4vw, 2.6rem); font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .section-kicker {
+      font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--crimson); font-weight: 600; margin-bottom: 10px;
+    }
+    p + p { margin-top: 14px; }
+    .split { display: grid; grid-template-columns: 1fr; gap: 28px; }
+    @media (min-width: 800px) {
+      .split { grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+      nav { gap: 18px; }
+    }
+    .principle {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      padding: 22px 22px 20px;
+      margin-top: 16px;
+    }
+    .principle h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.45rem; font-weight: 600;
+    }
+    .principle .jp { font-weight: 500; color: var(--muted); font-size: .95rem; }
+    .principle p { margin-top: 8px; }
+    .principle .ex { color: var(--muted); font-size: .92rem; margin-top: 8px; }
+    .yesno { display: grid; gap: 16px; }
+    @media (min-width: 720px) { .yesno { grid-template-columns: 1fr 1fr; } }
+    .card {
+      background: var(--white); border: 1px solid var(--rule); padding: 24px;
+    }
+    .card h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.45rem; margin-bottom: 10px;
+    }
+    .card ul { margin-left: 18px; }
+    .card li { margin: 7px 0; }
+    dl { display: grid; gap: 20px; }
+    dt { font-weight: 600; }
+    dd { color: #2c2924; }
+    form { display: grid; gap: 12px; margin-top: 22px; }
+    label {
+      font-size: .82rem; letter-spacing: .06em; text-transform: uppercase;
+      font-weight: 600; color: var(--muted);
+    }
+    input, select, textarea {
+      width: 100%; padding: 12px; border: 1px solid var(--rule);
+      background: var(--white); font: inherit; color: var(--ink);
+    }
+    textarea { min-height: 90px; resize: vertical; }
+    button.btn { cursor: pointer; font: inherit; width: fit-content; }
+    .contact-line { margin-top: 24px; }
+    .contact-line a { color: var(--ink); }
+    footer { padding: 28px 0 40px; color: var(--muted); font-size: .88rem; }
+    .note {
+      background: var(--paper-2); padding: 16px 18px;
+      border: 1px solid var(--rule); margin-top: 22px; font-size: .95rem;
+    }
+    .quote {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.35rem; line-height: 1.35; font-style: italic;
+      max-width: 34ch;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">Joseph’s Shito-Ryu<span>Port Orchard · South Kitsap</span></a>
+      <nav>
+        <a href="#joseph">Joseph</a>
+        <a href="#practice">Practice</a>
+        <a href="#who">The room</a>
+        <a href="#start">First class</a>
+        <a href="#contact">Come train</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div class="wrap">
+        <p class="kicker">Adult karate · Port Orchard / South Kitsap</p>
+        <h1>Adult Shito-Ryu karate in South Kitsap.</h1>
+        <p class="lede">I’m Joseph. I teach Shito-Ryu in Port Orchard and South Kitsap. This page is here if you want a little more about what we practice, how class works, and how to come in.</p>
+        <div class="cta-row">
+          <a class="btn" href="#contact">Ask about a first class</a>
+          <a class="btn-ghost" href="mailto:joseph.shitoryu@pm.me">joseph.shitoryu@pm.me</a>
+        </div>
+        <div class="pills">
+          <span class="pill">Adults 18+</span>
+          <span class="pill">Evenings</span>
+          <span class="pill">Recommended $150 / month</span>
+          <span class="pill">Light contact</span>
+        </div>
+      </div>
+    </div>
+
+    <section id="joseph">
+      <div class="narrow">
+        <p class="section-kicker">Instructor</p>
+        <h2>Joseph Vasquez</h2>
+        <p>I started karate at five. From fourteen to eighteen I taught ten to twenty hours a week at UKO Karate under Sensei David Grout, in a school of about three hundred students. That is where I learned how to teach — not just how to train.</p>
+        <p>I hold a Shito-Ryu shodan (2012). I am building a school here in South Kitsap — a room where adults can come practice.</p>
+        <p>Karatedo (空手道), the way of the empty hand, is mind, body, and spirit. You do not have to arrive with all three in place. Practice is how they catch up to each other.</p>
+        <p>I studied electrical engineering at the University of Washington. That is my other background. This school is the work I am doing now.</p>
+      </div>
+    </section>
+
+    <section id="practice">
+      <div class="wrap">
+        <p class="section-kicker">On the floor</p>
+        <h2>What we practice</h2>
+        <div class="split">
+          <div>
+            <p>We train a complete striking system: long range, mid-range, and close range, including clinch work. Contact stays light so you can come back next week and still use your hands at work.</p>
+            <p>Kata is there to sharpen form, gain new ideas, and for conditioning and coordination. I try to use Japanese terms in class and say the English next to them. I don’t always have the Japanese on the spot.</p>
+            <p>Our karate is this: meet the attack hard when it should be stopped, and soft when it should be guided past you. Both are the art.</p>
+            <p class="quote">Learn the principle. Mix it. Then make it yours on the floor.</p>
+          </div>
+          <div>
+            <div class="principle">
+              <h3>Defense — uke no go gensoku</h3>
+              <p class="jp">受けの五原則</p>
+              <p>Mabuni’s five ways to receive. Principles, not five named blocks. Mix them. Two of the five are below.</p>
+            </div>
+            <div class="principle">
+              <h3>Rakka — falling petals</h3>
+              <p class="jp">落花</p>
+              <p>Smash the attack on contact. Hard, twisting. Stops their weapon.</p>
+              <p class="ex">Examples: gedan-barai, age-uke, yoko-uke.</p>
+            </div>
+            <div class="principle">
+              <h3>Ryusui — flowing water</h3>
+              <p class="jp">流水</p>
+              <p>Do not crash. Guide their force past you. Soft, circular, continuous.</p>
+              <p class="ex">Examples: nagashi-uke, osae-uke, sukui-uke.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="who">
+      <div class="wrap">
+        <p class="section-kicker">The room</p>
+        <h2>Who trains here</h2>
+        <div class="yesno">
+          <div class="card">
+            <h3>Adults nearby</h3>
+            <ul>
+              <li>18 and up in Port Orchard, South Kitsap, Bremerton, and around the shipyard</li>
+              <li>People who are new, rusty, stiff, athletic, or coming back after years away</li>
+              <li>People who trained another striking art and want this structure</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>How class is set up</h3>
+            <ul>
+              <li>Adults only for now. Kids later if there is sufficient demand</li>
+              <li>Regular evening classes as the group fills out</li>
+              <li>Waiver before we train, light contact on the floor</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="start">
+      <div class="narrow">
+        <p class="section-kicker">Coming in</p>
+        <h2>The first class</h2>
+        <dl>
+          <div>
+            <dt>Price</dt>
+            <dd>Come train the first month. After that the recommended price is $150 a month. It is negotiable. I am here to spread the art, not to extract a fee.</dd>
+          </div>
+          <div>
+            <dt>What to wear</dt>
+            <dd>A t-shirt, sweats or gi pants, and clean feet. You do not need to buy a gi until you know you want to stay.</dd>
+          </div>
+          <div>
+            <dt>What we do</dt>
+            <dd>Warm-up, stance and striking basics, one receiving principle, short partner work, and light contact if you are ready.</dd>
+          </div>
+          <div>
+            <dt>Place and time</dt>
+            <dd>South Kitsap, in a church or community space. I will confirm the floor when we pick a time. Evenings.</dd>
+          </div>
+        </dl>
+        <p class="note">I do not post a building until I have it lined up. When a night is regular, it will be there.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="narrow">
+        <p class="section-kicker">Next</p>
+        <h2>Come train</h2>
+        <p>If you want a first class, send this and I will write you back. You can also email me directly.</p>
+        <form action="mailto:joseph.shitoryu@pm.me" method="post" enctype="text/plain">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="Name" required autocomplete="name">
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="Phone" type="tel" required autocomplete="tel">
+          </div>
+          <div>
+            <label for="age">I am 18 or older</label>
+            <select id="age" name="Adult" required>
+              <option value="">Select</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <label for="bg">Training background</label>
+            <select id="bg" name="Background">
+              <option value="None">None</option>
+              <option value="Other art">Other art</option>
+              <option value="Karate before">Karate before</option>
+            </select>
+          </div>
+          <div>
+            <label for="evenings">Evenings that work</label>
+            <textarea id="evenings" name="Evenings" placeholder="Tue / Thu after 6, etc."></textarea>
+          </div>
+          <div>
+            <label for="kids">Kids</label>
+            <select id="kids" name="Kids">
+              <option value="No">Just me — adult class</option>
+              <option value="Interested">I also have a child who may want to enroll later</option>
+            </select>
+          </div>
+          <button class="btn" type="submit">Send</button>
+        </form>
+        <p class="contact-line">
+          Joseph Vasquez<br>
+          <a href="mailto:joseph.shitoryu@pm.me">joseph.shitoryu@pm.me</a>
+        </p>
+        <p class="fine">Adults 18+. Recommended $150 / month after the first month, negotiable. South Kitsap evenings.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Joseph’s Shito-Ryu · Port Orchard / South Kitsap
+    </div>
+  </footer>
+</body>
+</html>
