@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concepts — Joseph’s Shito-Ryu</title>
+  <meta name="description" content="Ideas we use on the floor. Distance in striking. Adult Shito-Ryu karate in Port Orchard and South Kitsap.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #161412;
+      --paper: #f4efe6;
+      --paper-2: #ebe4d8;
+      --rule: #c9bfb0;
+      --muted: #5c564c;
+      --crimson: #8b2a2a;
+      --crimson-dark: #6e1f1f;
+      --white: #fffdf8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.65;
+      font-size: 17px;
+    }
+    a { color: var(--crimson); }
+    .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+    .narrow { width: min(640px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(244,239,230,.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 0; gap: 16px;
+    }
+    .brand {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 600; font-size: 1.18rem; letter-spacing: .02em;
+      color: var(--ink); text-decoration: none;
+    }
+    .brand span {
+      display: block;
+      font-family: "Source Sans 3", sans-serif;
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    nav { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: flex-end; }
+    nav a {
+      color: var(--ink); text-decoration: none; font-size: .82rem;
+      letter-spacing: .08em; text-transform: uppercase; font-weight: 500;
+    }
+    nav a:hover, nav a[aria-current="page"] { color: var(--crimson); }
+    .hero {
+      padding: 64px 0 48px;
+      border-bottom: 1px solid var(--rule);
+      background:
+        radial-gradient(ellipse at 12% 0%, rgba(139,42,42,.08), transparent 46%),
+        linear-gradient(180deg, #efe8dc 0%, var(--paper) 100%);
+    }
+    .kicker {
+      font-size: .75rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--crimson); font-weight: 600; margin-bottom: 14px;
+    }
+    h1 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.08; font-weight: 600;
+    }
+    .lede { margin-top: 16px; max-width: 46ch; color: #2b2823; }
+    .toc {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-top: 28px;
+    }
+    .toc a {
+      font-size: .78rem; letter-spacing: .06em; text-transform: uppercase;
+      border: 1px solid var(--rule); padding: 6px 10px; color: var(--muted);
+      background: var(--white); text-decoration: none;
+    }
+    .toc a:hover { color: var(--crimson); border-color: var(--crimson); }
+    article {
+      padding: 56px 0 40px;
+      border-bottom: 1px solid var(--rule);
+    }
+    article h2 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    article p { font-size: 1.08rem; max-width: 58ch; }
+    article p + p { margin-top: 18px; }
+    .close-wrap { padding: 48px 0 72px; }
+    .close {
+      color: var(--muted);
+      font-size: .98rem;
+    }
+    .btn {
+      display: inline-block; background: var(--crimson); color: var(--white);
+      text-decoration: none; padding: 13px 22px; font-weight: 600;
+      letter-spacing: .04em; border: 1px solid var(--crimson-dark);
+      margin-top: 18px;
+    }
+    .btn:hover { background: var(--crimson-dark); }
+    footer { padding: 28px 0 40px; color: var(--muted); font-size: .88rem; }
+    @media (min-width: 800px) { nav { gap: 18px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">Joseph’s Shito-Ryu<span>Port Orchard · South Kitsap</span></a>
+      <nav>
+        <a href="index.html#joseph">Joseph</a>
+        <a href="index.html#practice">Practice</a>
+        <a href="concepts.html" aria-current="page">Concepts</a>
+        <a href="index.html#who">The room</a>
+        <a href="index.html#contact">Come train</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="narrow">
+        <p class="kicker">On the floor</p>
+        <h1>Concepts</h1>
+        <p class="lede">Ideas we use when we train. More will sit here as they earn a page.</p>
+        <div class="toc">
+          <a href="#distance">Distance</a>
+        </div>
+      </div>
+    </div>
+
+    <article id="distance">
+      <div class="narrow">
+        <h2>Distance in striking is a river.</h2>
+        <p>The water is deep and moving. Both banks are open. That does not make the crossing safe. It only means you can step in whenever you like — and get taken by the current if you guess.</p>
+        <p>Before you enter, you survey. Where it shallows. Where the line is short. That surveying is the skill. The crossing is the fight.</p>
+        <p>Danger is that stretch of water between you and them. Too far and you only watch. Too soon and you wade the deep part on their terms. Sloppy entry slows you. Sometimes it puts you under.</p>
+        <p>This is why we use light contact. You get to survey the same river again and again without losing the army — which here is just you. See. Choose the ford. Cross on purpose.</p>
+      </div>
+    </article>
+
+    <div class="close-wrap">
+      <div class="narrow">
+        <p class="close">Adult Shito-Ryu in Port Orchard / South Kitsap. Mornings and evenings. Adults 18+.</p>
+        <a class="btn" href="index.html#contact">Ask about a first class</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Joseph’s Shito-Ryu · Port Orchard / South Kitsap
+    </div>
+  </footer>
+</body>
+</html>
